@@ -1,17 +1,22 @@
 package org.coryjk.AdventOfCode.year2020.day01;
 
-import lombok.Builder;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.XSlf4j;
 import org.coryjk.AdventOfCode.commons.InputReader;
-import org.coryjk.AdventOfCode.commons.Solution;
+import org.coryjk.AdventOfCode.commons.SolutionLogger;
 
 import java.util.LinkedList;
 import java.util.List;
 
 @XSlf4j
-@Builder
-public final class ReportRepair implements Solution {
-    private final int[] input;
+@NoArgsConstructor
+public final class ReportRepair extends SolutionLogger {
+    private int[] input;
+
+    @Override
+    public void feed(final int year, final int day) {
+        input = InputReader.getIntInput(year, day);
+    }
 
     @Override
     public String solve() {
@@ -34,10 +39,8 @@ public final class ReportRepair implements Solution {
 
     @Override
     public void solveAndLog() {
-        log.info(ReportRepair.builder()
-                .input(InputReader.getIntInput(2020,1))
-                .build()
-                .solve());
+        ReportRepair.getInstance().feed(2020, 1);
+        log.info(ReportRepair.getInstance().solve());
     }
 
     private boolean sumsTo2020(final int ... indices) {

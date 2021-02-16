@@ -8,6 +8,6 @@ import org.coryjk.AdventOfCode.year2020.day01.ReportRepair;
 public final class AdventOfCode {
     public static void main(String[] args) {
         BasicConfigurator.configure();
-        ReportRepair.builder().build().solveAndLog();
+        new ReportRepair().solveAndLog();
     }
 }
