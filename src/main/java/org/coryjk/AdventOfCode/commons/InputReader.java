@@ -15,26 +15,33 @@ import java.util.stream.Collectors;
 
 @XSlf4j
 public final class InputReader {
-    private static final String PATH_FORMAT = "%s/%s";
+    private static final String PATH_FORMAT = "%s/day%s";
 
-    public static String getPath(final int year, final int day) {
+    public static int[] getIntInput(final int year, final int day) {
+        final List<Integer> inputList = Arrays.stream(getResourceBuffer(getPath(year, day)))
+                .map(Integer::parseInt)
+                .collect(Collectors.toList());
+        final int[] input = new int[inputList.size()];
+
+        // fill array
+        for (int i = 0; i < input.length; i++) {
+            input[i] = inputList.get(i);
+        }
+        return input;
+    }
+
+    public static String[] getStringInput(final int year, final int day) {
+        return getResourceBuffer(getPath(year, day));
+    }
+
+    private static String getPath(final int year, final int day) {
         return String.format(PATH_FORMAT, year,
                 StringUtils.leftPad(Integer.toString(day), 2, '0'));
     }
 
-    public static Integer[] getIntInput(final String path) {
-        return Arrays.stream(getResourceBuffer(path))
-                .map(Integer::parseInt)
-                .collect(Collectors.toList())
-                .toArray(Integer[]::new);
-    }
-
-    public static String[] getStringInput(final String path) {
-        return getResourceBuffer(path);
-    }
-
     private static String[] getResourceBuffer(final String path) {
         final URL resource = InputReader.class.getClassLoader().getResource(path);
+        log.info("Loading resource: {}", resource);
         if (resource != null) {
             try {
                 final File inputSource = new File(resource.getFile());
@@ -46,7 +53,7 @@ public final class InputReader {
                     lines.add(line);
                 }
                 reader.close();
-                return (String[]) lines.toArray();
+                return lines.toArray(String[]::new);
             } catch (IOException exception) {
                 log.error("Exception thrown while getting resource " + path, exception);
             }
