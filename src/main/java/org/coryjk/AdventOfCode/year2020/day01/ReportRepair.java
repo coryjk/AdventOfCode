@@ -13,13 +13,28 @@ import java.util.List;
 public final class ReportRepair extends SolutionLogger {
     private int[] input;
 
+    // TODO: some before annotation
     @Override
     public void feed(final int year, final int day) {
         input = InputReader.getIntInput(year, day);
     }
 
     @Override
-    public String solve() {
+    public String solvePart1() {
+        final List<Integer> sumTo2020 = new LinkedList<>();
+        for (int i = 0; i < input.length; i++) {
+            for (int j = i+1; j < input.length-1; j++) {
+                if (sumsTo2020(i, j)) {
+                    sumTo2020.add(input[i]);
+                    sumTo2020.add(input[j]);
+                }
+            }
+        }
+        return reduceProduct(sumTo2020);
+    }
+
+    @Override
+    public String solvePart2() {
         final List<Integer> sumTo2020 = new LinkedList<>();
         for (int i = 0; i < input.length; i++) {
             for (int j = i+1; j < input.length-1; j++) {
@@ -32,15 +47,7 @@ public final class ReportRepair extends SolutionLogger {
                 }
             }
         }
-        return Integer.toString(sumTo2020.stream()
-                .reduce(Math::multiplyExact)
-                .orElse(0));
-    }
-
-    @Override
-    public void solveAndLog() {
-        ReportRepair.getInstance().feed(2020, 1);
-        log.info(ReportRepair.getInstance().solve());
+        return reduceProduct(sumTo2020);
     }
 
     private boolean sumsTo2020(final int ... indices) {
@@ -49,5 +56,11 @@ public final class ReportRepair extends SolutionLogger {
             sum += input[i];
         }
         return sum == 2020;
+    }
+
+    private String reduceProduct(final List<Integer> sums) {
+        return Integer.toString(sums.stream()
+                .reduce(Math::multiplyExact)
+                .orElse(0));
     }
 }
