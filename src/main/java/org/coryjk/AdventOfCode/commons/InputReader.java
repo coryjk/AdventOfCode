@@ -41,7 +41,6 @@ public final class InputReader {
 
     private static String[] getResourceBuffer(final String path) {
         final URL resource = InputReader.class.getClassLoader().getResource(path);
-        log.info("Loading resource: {}", resource);
         if (resource != null) {
             try {
                 final File inputSource = new File(resource.getFile());

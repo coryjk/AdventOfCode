@@ -1,21 +1,23 @@
 package org.coryjk.AdventOfCode.commons;
 
-import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public abstract class SolutionLogger implements Solution {
-    @Getter static SolutionLogger instance;
-
-    public SolutionLogger() {
-        if (getInstance() != null) {
-            throw new IllegalStateException("There is an existing Advent solution logger singleton!");
-        }
-        instance = this;
-    }
-
     public void solve() {
+        final String solution1;
+        final String solution2;
+
+        /*
+         * Initialize state before each solution part. This is to reset any change in initial state
+         * done during solving of an earlier part.
+         */
         feed();
-        log.info("[{}]: Part 1 [{}], Part 2 [{}]", getClass().getSimpleName(), solvePart1(), solvePart2());
+        solution1 = solvePart1();
+        feed();
+        solution2 = solvePart2();
+
+        // display solutions
+        log.info("[{}]: Part 1 [{}], Part 2 [{}]", getClass().getSimpleName(), solution1, solution2);
     }
 }
