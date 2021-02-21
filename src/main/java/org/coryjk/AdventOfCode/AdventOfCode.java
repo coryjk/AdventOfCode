@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.log4j.BasicConfigurator;
 import org.coryjk.AdventOfCode.year2020.day01.ReportRepair;
 import org.coryjk.AdventOfCode.year2020.day02.PasswordPhilosophy;
+import org.coryjk.AdventOfCode.year2020.day03.TobogganTrajectory;
 
 @Slf4j
 public final class AdventOfCode {
@@ -11,5 +12,6 @@ public final class AdventOfCode {
         BasicConfigurator.configure();
         new ReportRepair().solve();
         new PasswordPhilosophy().solve();
+        new TobogganTrajectory().solve();
     }
 }
