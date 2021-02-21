@@ -1,6 +1,6 @@
 package org.coryjk.AdventOfCode.commons;
 
-import lombok.extern.slf4j.XSlf4j;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.BufferedReader;
@@ -13,7 +13,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@XSlf4j
+@Slf4j
 public final class InputReader {
     private static final String PATH_FORMAT = "%s/day%s";
 

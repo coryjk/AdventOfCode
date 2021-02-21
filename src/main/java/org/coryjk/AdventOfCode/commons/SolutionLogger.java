@@ -1,9 +1,9 @@
 package org.coryjk.AdventOfCode.commons;
 
 import lombok.Getter;
-import lombok.extern.slf4j.XSlf4j;
+import lombok.extern.slf4j.Slf4j;
 
-@XSlf4j
+@Slf4j
 public abstract class SolutionLogger implements Solution {
     @Getter static SolutionLogger instance;
 
@@ -15,8 +15,7 @@ public abstract class SolutionLogger implements Solution {
     }
 
     public void solve() {
-        log.info("[{}]:", getClass().getSimpleName());
-        log.info("Part 1: " + solvePart1());
-        log.info("Part 2: " + solvePart2());
+        feed();
+        log.info("[{}]: Part 1 [{}], Part 2 [{}]", getClass().getSimpleName(), solvePart1(), solvePart2());
     }
 }

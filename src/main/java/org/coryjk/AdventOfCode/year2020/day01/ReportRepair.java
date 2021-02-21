@@ -1,22 +1,21 @@
 package org.coryjk.AdventOfCode.year2020.day01;
 
 import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.XSlf4j;
+import lombok.extern.slf4j.Slf4j;
 import org.coryjk.AdventOfCode.commons.InputReader;
 import org.coryjk.AdventOfCode.commons.SolutionLogger;
 
 import java.util.LinkedList;
 import java.util.List;
 
-@XSlf4j
+@Slf4j
 @NoArgsConstructor
 public final class ReportRepair extends SolutionLogger {
     private int[] input;
 
-    // TODO: some before annotation
     @Override
-    public void feed(final int year, final int day) {
-        input = InputReader.getIntInput(year, day);
+    public void feed() {
+        input = InputReader.getIntInput(2020, 1);
     }
 
     @Override

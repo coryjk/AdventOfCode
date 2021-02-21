@@ -1,7 +1,13 @@
 package org.coryjk.AdventOfCode.commons;
 
 public interface Solution {
-    void feed(final int year, final int day);
-    String solvePart1();
-    String solvePart2();
+    void feed();
+
+    default String solvePart1() {
+        return null;
+    }
+
+    default String solvePart2() {
+        return null;
+    }
 }
