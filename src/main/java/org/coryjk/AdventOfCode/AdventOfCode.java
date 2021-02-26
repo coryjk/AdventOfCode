@@ -7,6 +7,7 @@ import org.coryjk.AdventOfCode.year2020.day02.PasswordPhilosophy;
 import org.coryjk.AdventOfCode.year2020.day03.TobogganTrajectory;
 import org.coryjk.AdventOfCode.year2020.day04.PassportProcessing;
 import org.coryjk.AdventOfCode.year2020.day05.BinaryBoarding;
+import org.coryjk.AdventOfCode.year2020.day06.CustomCustoms;
 
 @Slf4j
 public final class AdventOfCode {
@@ -17,5 +18,6 @@ public final class AdventOfCode {
         new TobogganTrajectory().solve();
         new PassportProcessing().solve();
         new BinaryBoarding().solve();
+        new CustomCustoms().solve();
     }
 }
