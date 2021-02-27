@@ -52,7 +52,7 @@ public final class HandyHaversacks extends SolutionLogger {
     @Override
     public String solvePart2() {
         final Bag shinyGoldBag = getBagByColor(SHINY_GOLD);
-        return "" + countBagsThatMeetCriteria(shinyGoldBag, bag -> true);
+        return Integer.toString(countBagsThatMeetCriteria(shinyGoldBag, bag -> true));
     }
 
     /**
