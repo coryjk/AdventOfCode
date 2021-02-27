@@ -38,9 +38,9 @@ public final class HandyHaversacks extends SolutionLogger {
      */
     @Override
     public String solvePart1() {
-        final Predicate<String> hasShinyBag = SHINY_GOLD::equalsIgnoreCase;
+        final Predicate<String> hasShinyGoldBag = SHINY_GOLD::equalsIgnoreCase;
         return Integer.toString((int) Arrays.stream(rules)
-                .filter(bag -> countBagsThatMeetCriteria(bag, hasShinyBag) > 0)
+                .filter(bag -> countBagsThatMeetCriteria(bag, hasShinyGoldBag) > 0)
                 .count());
     }
 
