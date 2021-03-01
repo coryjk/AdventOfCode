@@ -12,7 +12,12 @@ public final class Console {
     enum Instruction {
         ACC,
         JMP,
-        NOP
+        NOP;
+
+        @Override
+        public String toString() {
+            return name().toLowerCase();
+        }
     }
 
     public Console(final String[] input) {
