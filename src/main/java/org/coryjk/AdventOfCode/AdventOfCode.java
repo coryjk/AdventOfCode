@@ -10,6 +10,7 @@ import org.coryjk.AdventOfCode.year2020.day04.PassportProcessing;
 import org.coryjk.AdventOfCode.year2020.day05.BinaryBoarding;
 import org.coryjk.AdventOfCode.year2020.day06.CustomCustoms;
 import org.coryjk.AdventOfCode.year2020.day07.HandyHaversacks;
+import org.coryjk.AdventOfCode.year2020.day08.HandheldHalting;
 
 @Slf4j
 public final class AdventOfCode {
@@ -22,7 +23,8 @@ public final class AdventOfCode {
                 PassportProcessing.class,
                 BinaryBoarding.class,
                 CustomCustoms.class,
-                HandyHaversacks.class
+                HandyHaversacks.class,
+                HandheldHalting.class
         );
     }
 
