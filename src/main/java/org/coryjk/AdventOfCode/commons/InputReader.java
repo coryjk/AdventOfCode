@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 public final class InputReader {
-    private static final String PATH_FORMAT = "%s/day%s";
+    private static final String PATH_FORMAT = "%s/day%s.txt";
 
     public static int[] getIntInput(final int year, final int day) {
         final List<Integer> inputList = Arrays.stream(getResourceBuffer(getPath(year, day)))
