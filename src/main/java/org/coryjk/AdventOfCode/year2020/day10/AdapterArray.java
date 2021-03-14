@@ -6,6 +6,7 @@ import org.coryjk.AdventOfCode.commons.SolutionLogger;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -60,6 +61,32 @@ public final class AdapterArray extends SolutionLogger {
      */
     @Override
     public String solvePart2() {
-        return null;
+        // sort in ascending order
+        jolts.sort(Integer::compareTo);
+
+        // implicit start at 0 and end at last jolt + 3
+        jolts.add(0, 0);
+        jolts.add(jolts.get(jolts.size()-1) + MAX_JOLTS_DIFF);
+
+        return Long.toString(countUniquePaths(0, jolts, new HashMap<>()));
+    }
+
+    private long countUniquePaths(final int i, final List<Integer> jolts, final Map<Integer, Long> uniquePaths) {
+        // base case, only 1 unique path at the end
+        if (i == jolts.size()-1) {
+            return 1L;
+        }
+        // check cache
+        if (uniquePaths.containsKey(i)) {
+            return uniquePaths.get(i);
+        }
+        long paths = 0;
+        for (int j = i+1; j < jolts.size(); j++) {
+            paths += jolts.get(j) - jolts.get(i) <= MAX_JOLTS_DIFF
+                    ? countUniquePaths(j, jolts, uniquePaths)
+                    : 0L;
+        }
+        uniquePaths.put(i, paths);
+        return paths;
     }
 }
