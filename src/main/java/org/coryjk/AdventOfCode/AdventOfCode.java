@@ -13,6 +13,7 @@ import org.coryjk.AdventOfCode.year2020.day07.HandyHaversacks;
 import org.coryjk.AdventOfCode.year2020.day08.HandheldHalting;
 import org.coryjk.AdventOfCode.year2020.day09.EncodingError;
 import org.coryjk.AdventOfCode.year2020.day10.AdapterArray;
+import org.coryjk.AdventOfCode.year2020.day11.SeatingSystem;
 
 @Slf4j
 public final class AdventOfCode {
@@ -28,7 +29,8 @@ public final class AdventOfCode {
                 HandyHaversacks.class,
                 HandheldHalting.class,
                 EncodingError.class,
-                AdapterArray.class
+                AdapterArray.class,
+                SeatingSystem.class
         );
     }
 
