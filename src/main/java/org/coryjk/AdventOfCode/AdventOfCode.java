@@ -15,6 +15,7 @@ import org.coryjk.AdventOfCode.year2020.day09.EncodingError;
 import org.coryjk.AdventOfCode.year2020.day10.AdapterArray;
 import org.coryjk.AdventOfCode.year2020.day11.SeatingSystem;
 import org.coryjk.AdventOfCode.year2020.day12.RainRisk;
+import org.coryjk.AdventOfCode.year2020.day13.ShuttleSearch;
 
 @Slf4j
 public final class AdventOfCode {
@@ -32,7 +33,8 @@ public final class AdventOfCode {
                 EncodingError.class,
                 AdapterArray.class,
                 SeatingSystem.class,
-                RainRisk.class
+                RainRisk.class,
+                ShuttleSearch.class
         );
     }
 
