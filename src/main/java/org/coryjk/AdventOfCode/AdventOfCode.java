@@ -16,6 +16,7 @@ import org.coryjk.AdventOfCode.year2020.day10.AdapterArray;
 import org.coryjk.AdventOfCode.year2020.day11.SeatingSystem;
 import org.coryjk.AdventOfCode.year2020.day12.RainRisk;
 import org.coryjk.AdventOfCode.year2020.day13.ShuttleSearch;
+import org.coryjk.AdventOfCode.year2020.day14.DockingData;
 
 @Slf4j
 public final class AdventOfCode {
@@ -34,7 +35,8 @@ public final class AdventOfCode {
                 AdapterArray.class,
                 SeatingSystem.class,
                 RainRisk.class,
-                ShuttleSearch.class
+                ShuttleSearch.class,
+                DockingData.class
         );
     }
 
