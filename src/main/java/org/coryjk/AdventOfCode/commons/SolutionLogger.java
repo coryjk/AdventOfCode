@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public abstract class SolutionLogger implements Solution {
+
     public void solve() {
         final String solution1;
         final String solution2;
@@ -19,5 +20,13 @@ public abstract class SolutionLogger implements Solution {
 
         // display solutions
         log.info("[{}]: Part 1 [{}], Part 2 [{}]", getClass().getSimpleName(), solution1, solution2);
+    }
+
+    public String solvePart1() {
+        throw new IllegalStateException("Part 1 not implemented!");
+    }
+
+    public String solvePart2() {
+        throw new IllegalStateException("Part 2 not implemented!");
     }
 }

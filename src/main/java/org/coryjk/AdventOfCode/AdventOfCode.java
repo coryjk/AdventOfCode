@@ -17,27 +17,50 @@ import org.coryjk.AdventOfCode.year2020.day11.SeatingSystem;
 import org.coryjk.AdventOfCode.year2020.day12.RainRisk;
 import org.coryjk.AdventOfCode.year2020.day13.ShuttleSearch;
 import org.coryjk.AdventOfCode.year2020.day14.DockingData;
+import org.coryjk.AdventOfCode.year2020.day15.RambunctiousRecitation;
+import org.coryjk.AdventOfCode.year2021.SonarSweep;
+
+import java.util.Arrays;
+import java.util.List;
 
 @Slf4j
 public final class AdventOfCode {
+
+    private static final List<Class<? extends SolutionLogger>> solutions2020 = Arrays.asList(
+            ReportRepair.class,
+            PasswordPhilosophy.class,
+            TobogganTrajectory.class,
+            PassportProcessing.class,
+            BinaryBoarding.class,
+            CustomCustoms.class,
+            HandyHaversacks.class,
+            HandheldHalting.class,
+            EncodingError.class,
+            AdapterArray.class,
+            SeatingSystem.class,
+            RainRisk.class,
+            ShuttleSearch.class,
+            DockingData.class,
+            RambunctiousRecitation.class
+    );
+
+    private static final List<Class<? extends SolutionLogger>> solutions2021 = Arrays.asList(
+            SonarSweep.class
+    );
+
     public static void main(String[] args) {
         BasicConfigurator.configure();
-        solve(
-                ReportRepair.class,
-                PasswordPhilosophy.class,
-                TobogganTrajectory.class,
-                PassportProcessing.class,
-                BinaryBoarding.class,
-                CustomCustoms.class,
-                HandyHaversacks.class,
-                HandheldHalting.class,
-                EncodingError.class,
-                AdapterArray.class,
-                SeatingSystem.class,
-                RainRisk.class,
-                ShuttleSearch.class,
-                DockingData.class
-        );
+        solve(solutions2021);
+    }
+
+    private static void solve(final List<Class<? extends SolutionLogger>> solutions) {
+        for (final Class<? extends SolutionLogger> solution : solutions) {
+            try {
+                solution.getConstructor().newInstance().solve();
+            } catch (Exception exception) {
+                log.error("Issue calling solution driver for " + solution.getName(), exception);
+            }
+        }
     }
 
     @SafeVarargs
