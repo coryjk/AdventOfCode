@@ -18,6 +18,7 @@ import org.coryjk.AdventOfCode.year2020.day12.RainRisk;
 import org.coryjk.AdventOfCode.year2020.day13.ShuttleSearch;
 import org.coryjk.AdventOfCode.year2020.day14.DockingData;
 import org.coryjk.AdventOfCode.year2020.day15.RambunctiousRecitation;
+import org.coryjk.AdventOfCode.year2021.Dive;
 import org.coryjk.AdventOfCode.year2021.SonarSweep;
 
 import java.util.Arrays;
@@ -45,7 +46,8 @@ public final class AdventOfCode {
     );
 
     private static final List<Class<? extends SolutionLogger>> solutions2021 = Arrays.asList(
-            SonarSweep.class
+            SonarSweep.class,
+            Dive.class
     );
 
     public static void main(String[] args) {
