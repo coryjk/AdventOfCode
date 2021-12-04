@@ -18,9 +18,9 @@ import org.coryjk.AdventOfCode.year2020.day12.RainRisk;
 import org.coryjk.AdventOfCode.year2020.day13.ShuttleSearch;
 import org.coryjk.AdventOfCode.year2020.day14.DockingData;
 import org.coryjk.AdventOfCode.year2020.day15.RambunctiousRecitation;
-import org.coryjk.AdventOfCode.year2021.BinaryDiagnostic;
-import org.coryjk.AdventOfCode.year2021.Dive;
-import org.coryjk.AdventOfCode.year2021.SonarSweep;
+import org.coryjk.AdventOfCode.year2021.day03.BinaryDiagnostic;
+import org.coryjk.AdventOfCode.year2021.day02.Dive;
+import org.coryjk.AdventOfCode.year2021.day01.SonarSweep;
 
 import java.util.Arrays;
 import java.util.List;

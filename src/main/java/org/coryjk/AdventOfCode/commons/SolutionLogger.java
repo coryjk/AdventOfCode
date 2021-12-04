@@ -23,10 +23,10 @@ public abstract class SolutionLogger implements Solution {
     }
 
     public String solvePart1() {
-        throw new IllegalStateException("Part 1 not implemented!");
+        return "PART 1 NOT IMPLEMENTED";
     }
 
     public String solvePart2() {
-        throw new IllegalStateException("Part 2 not implemented!");
+        return "PART 2 NOT IMPLEMENTED";
     }
 }

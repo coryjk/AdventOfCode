@@ -1,4 +1,4 @@
-package org.coryjk.AdventOfCode.year2021;
+package org.coryjk.AdventOfCode.year2021.day02;
 
 import lombok.extern.slf4j.Slf4j;
 import org.coryjk.AdventOfCode.commons.InputReader;
