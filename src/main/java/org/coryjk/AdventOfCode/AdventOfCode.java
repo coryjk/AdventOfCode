@@ -21,6 +21,7 @@ import org.coryjk.AdventOfCode.year2020.day15.RambunctiousRecitation;
 import org.coryjk.AdventOfCode.year2021.day03.BinaryDiagnostic;
 import org.coryjk.AdventOfCode.year2021.day02.Dive;
 import org.coryjk.AdventOfCode.year2021.day01.SonarSweep;
+import org.coryjk.AdventOfCode.year2021.day04.GiantSquid;
 
 import java.util.Arrays;
 import java.util.List;
@@ -49,7 +50,8 @@ public final class AdventOfCode {
     private static final List<Class<? extends SolutionLogger>> solutions2021 = Arrays.asList(
             SonarSweep.class,
             Dive.class,
-            BinaryDiagnostic.class
+            BinaryDiagnostic.class,
+            GiantSquid.class
     );
 
     public static void main(String[] args) {
